@@ -1,68 +1,58 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 
-function Sidebar({ setSelectedOption }) {
+function Sidebar({ option, setOption }) {
     // State to keep track of expanded menu and selected item
-    const [expandedMenu, setExpandedMenu] = useState([false, false, false]);
-
-    // Toggles the expanded state of a menu
-    const toggleMenu = (menu) => {
-        if(menu=== 1)
-            setExpandedMenu((prevMenu) => [!prevMenu[0], prevMenu[1], prevMenu[2]]);
-        else if (menu=== 2)
-            setExpandedMenu((prevMenu) => [prevMenu[0], !prevMenu[1], prevMenu[2]]);
-        else
-            setExpandedMenu((prevMenu) => [prevMenu[0], prevMenu[1], !prevMenu[2]]);
-    };
 
 
-    // Handles selecting an option
-    const handleSelect = (option) => {
-        setSelectedOption(option);
+
+
+    const handleOption = (option) => {
+        setOption(option);
     };
 
     return (
         <aside className="sidebar">
             <ul>
                 {/* Macroeconomic Section */}
-                <li onClick={() => toggleMenu(1)}>
+                <li onClick={() => handleOption('Macroeconomic')}>
                     Macroeconomic (USD)
                 </li>
-                {expandedMenu[0] && (
+                {option === 'Macroeconomic' && (
                     <ul>
-                        <li onClick={() => handleSelect('gearbox1')}>GDP USD (USD)</li>
-                        <li onClick={() => handleSelect('gearbox2')}>FDI Inflows (USD)</li>
-                        <li onClick={() => handleSelect('gearbox3')}>FDI Outflows (USD)</li>
+                        <li>GDP USD (USD)</li>
+                        <li>FDI Inflows (USD)</li>
+                        <li>FDI Outflows (USD)</li>
                     </ul>
                 )}
 
                 {/* Agricultural Section */}
-                <li onClick={() => toggleMenu(2)}>
+                <li onClick={() => handleOption('Agricultural')}>
                     Agricultural
                 </li>
-                {expandedMenu[1]  && (
+                {option === 'Agricultural'  && (
                     <ul>
-                        <li onClick={() => handleSelect('agri_gdp')}>Contribution of Agri (% GDP)</li>
-                        <li onClick={() => handleSelect('credit')}>Credit</li>
-                        <li onClick={() => handleSelect('fertilizers')}>Fertilizers</li>
-                        <li onClick={() => handleSelect('fertilizers_prod')}>Fertilizers PROD</li>
+                        <li>Contribution of Agri (% GDP)</li>
+                        <li>Credit</li>
+                        <li>Fertilizers</li>
+                        <li>Fertilizers PROD</li>
                     </ul>
                 )}
 
                 {/* Debt Services Section */}
-                <li onClick={() => toggleMenu(3)}>
+                <li onClick={() => handleOption('Debt Services')}>
                     Debt Services
                 </li>
-                {expandedMenu[2]  && (
+                {option === 'Debt Services' && (
                     <ul>
-                        <li onClick={() => handleSelect('reserves')}>Reserves</li>
-                        <li onClick={() => handleSelect('gni')}>GNI</li>
-                        <li onClick={() => handleSelect('total_debt')}>Total Debt (%)</li>
+                        <li>Reserves</li>
+                        <li>GNI</li>
+                        <li>Total Debt (%)</li>
                     </ul>
                 )}
 
                 {/* Import/Export Flow */}
-                <li onClick={() => handleSelect('import_export')}>
+                <li onClick={() => handleOption('Import/Export Flow')}>
                     Import/Export Flow
                 </li>
                 <li onClick={() => handleSelect('chat')}>

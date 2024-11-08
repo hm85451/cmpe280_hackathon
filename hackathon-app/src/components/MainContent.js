@@ -7,9 +7,7 @@ function MainContent({selectedOption}) {
             {selectedOption === 'chat' ? (
                 <Chat />
             ) : (
-                <div className="timeline">
-                    {selectedOption}
-                </div>
+                    <div>{option}, {country}</div>
             )}
         </main>
     );
