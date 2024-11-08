@@ -52,7 +52,7 @@ function Sidebar({ option, setOption }) {
                 )}
 
                 {/* Import/Export Flow */}
-                <li onClick={() => handleOption('Import/Export Flow')}>
+                <li onClick={() => handleOption('import')}>
                     Import/Export Flow
                 </li>
                 <li onClick={() => handleOption('chat')}>
