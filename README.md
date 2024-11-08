@@ -4,7 +4,7 @@ group member:
 
 Haoming Chen 013118495
 Tai Le 015617953
-Nguyen Bui
+Nguyen Bui 010732150
 Sarah Yu
 
 
