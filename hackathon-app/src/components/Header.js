@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import ReactFlagsSelect from "react-flags-select";
 
-function Header() {
-    const [selectedCountry, setSelectedCountry] = useState(null);
+function Header({country, setCountry}) {
 
     return (
         <header className="header">
@@ -11,8 +10,8 @@ function Header() {
             <ReactFlagsSelect
             className="react-flag-select"
             countries={["US", "CN", "IN"]}
-            selected={selectedCountry}
-            onSelect={(code) => setSelectedCountry(code)}
+            selected={country}
+            onSelect={(code) => setCountry(code)}
   />
         </header>
         

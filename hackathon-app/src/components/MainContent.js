@@ -1,10 +1,10 @@
 import React from 'react';
 import './MainContent.css';
 
-function MainContent({selectedOption}) {
+function MainContent({option, country}) {
     return (
         <main className="main-content">
-            <div className="timeline">{selectedOption}</div>
+            <div>{option}, {country}</div>
         </main>
     );
 }
