@@ -84,7 +84,7 @@ function GraphUI({ selectedOption, selectedCountry }) {
             if (chartInstance) chartInstance.destroy();
         });
         setChartInstances([]);
-        setStartYear(1970);
+        setStartYear(1971);
         setEndYear(2020);
     }, [selectedOption, selectedCountry]);
 
@@ -174,10 +174,10 @@ function GraphUI({ selectedOption, selectedCountry }) {
             }
 
             noUiSlider.create(sliderRef.current, {
-                start: [1970, 2020],
+                start: [1971, 2020],
                 connect: true,
                 range: {
-                    min: 1970,
+                    min: 1971,
                     max: 2020
                 },
                 step: 1,
