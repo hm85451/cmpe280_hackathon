@@ -1,7 +1,6 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 1rem;
     background-color: #f0f0f0;
 }
@@ -16,6 +15,7 @@
 .title {
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 0 auto;
 }
 
 .country-flag {
@@ -23,4 +23,9 @@
     color: white;
     padding: 0.5rem;
     border-radius: 4px;
+}
+
+.react-flag-select {
+    position: absolute;
+    right: 1rem;
 }
