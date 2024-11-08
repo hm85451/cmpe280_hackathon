@@ -30,9 +30,9 @@ function Sidebar({ setSelectedOption }) {
                 </li>
                 {expandedMenu[0] && (
                     <ul>
-                        <li onClick={() => handleSelect('gearbox1')}>GDP USD (USD)</li>
-                        <li onClick={() => handleSelect('gearbox2')}>FDI Inflows (USD)</li>
-                        <li onClick={() => handleSelect('gearbox3')}>FDI Outflows (USD)</li>
+                        <li onClick={() => handleSelect('gdp')}>GDP USD (USD)</li>
+                        <li onClick={() => handleSelect('fdi_in')}>FDI Inflows (USD)</li>
+                        <li onClick={() => handleSelect('fdi_out')}>FDI Outflows (USD)</li>
                     </ul>
                 )}
 

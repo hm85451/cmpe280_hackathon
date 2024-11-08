@@ -4,7 +4,8 @@ import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 import { getGDP } from "../Api";
 
-const GraphUI = () => {
+function GraphUI({selectedCountry, selectedOption}) {
+
     const chartRef = useRef(null);
     const sliderRef = useRef(null);
     const [chart, setChart] = useState(null);
@@ -17,7 +18,7 @@ const GraphUI = () => {
         const fetchData = async () => {
             try {
                 // Fetch data from the API
-                const response = await getGDP("CHN", 1990, 2020);
+                const response = await getGDP(selectedCountry, 1990, 2020);
                 const years = response.map(item => item.year);
                 const dataPoints = response.map(item => item.value);
 
