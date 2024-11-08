@@ -1,11 +1,9 @@
 export function getIndicatorData(from, to, country, indicator) {
     const url = `https://api.worldbank.org/v2/countries/${country}/indicators/${indicator}?date=${from}:${to}&format=json`;
 
-    console.log("fetching: " + url);
     return fetch(url)
         .then((response) => response.json())
         .then((result) => {
-            console.log(result);
             if (result.length < 2 || !Array.isArray(result[1])) {
                 throw new Error("No data returned for indicator: " + indicator);
             }

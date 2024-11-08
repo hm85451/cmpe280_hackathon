@@ -2,6 +2,7 @@ import React from 'react';
 import './MainContent.css';
 import Chat from './Chat';
 import Visualizer from './Visualizer';
+import GraphUI from './GraphUI';
 
 function MainContent({option, country}) {
     return (
@@ -10,7 +11,7 @@ function MainContent({option, country}) {
                 <Chat />
             ) : option === 'import' ? 
                 <Visualizer /> : (
-                    <div>{option}, {country}</div>
+                        <GraphUI selectedOption={option} selectedCountry={country} />
             )}
 
         </main>
