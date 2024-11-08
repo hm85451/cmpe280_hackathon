@@ -1,19 +1,18 @@
 import React from 'react';
 import './MainContent.css';
 import GraphUI from "./GraphUI";
+import Chat from './Chat';
 
-function MainContent({selectedOption}) {
+function MainContent({option, country}) {
     console.log("I want to see selectedOption: " + selectedOption)
+
     return (
         <main className="main-content">
-            <div className="charts">
-                <GraphUI selectedOption={selectedOption} />
-                <div className="chart">GDP Chart</div>
-                <div className="chart">FDI Outflows Chart</div>
-                <div className="chart">FDI Inflows Chart</div>
-            </div>
-            <div className="annotations">Annotation</div>
-            <div className="footer">Footer</div>
+            {option === 'chat' ? (
+                <Chat />
+            ) : (
+                    <div>{option}, {country}</div>
+            )}
         </main>
     );
 }
