@@ -4,14 +4,22 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 
+
 function App() {
     const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedCountry, setSelectedCountry] = useState(null);
     return (
         <div className="app">
             <Header />
             <div className="app-body">
-                <Sidebar setSelectedOption={setSelectedOption}/>
-                <MainContent selectedOption={selectedOption}/>
+                <Sidebar 
+                    setSelectedOption={setSelectedOption}
+                    setSelectedCountry={setSelectedCountry}
+                />
+                <MainContent 
+                    option={selectedOption}
+                    country={selectedCountry}
+                />
             </div>
         </div>
     );

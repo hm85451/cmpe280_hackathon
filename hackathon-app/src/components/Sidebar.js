@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 
-function Sidebar({ setSelectedOption }) {
+function Sidebar({ setSelectedOption, setSelectedCountry }) {
     // State to keep track of expanded menu and selected item
     const [expandedMenu, setExpandedMenu] = useState([false, false, false]);
 
     // Toggles the expanded state of a menu
     const toggleMenu = (menu) => {
-        if(menu=== 1)
+        if(menu === 1)
             setExpandedMenu((prevMenu) => [!prevMenu[0], prevMenu[1], prevMenu[2]]);
-        else if (menu=== 2)
+        else if (menu === 2)
             setExpandedMenu((prevMenu) => [prevMenu[0], !prevMenu[1], prevMenu[2]]);
         else
             setExpandedMenu((prevMenu) => [prevMenu[0], prevMenu[1], !prevMenu[2]]);
     };
 
-
     // Handles selecting an option
     const handleSelect = (option) => {
         setSelectedOption(option);
+        // For import option, we don't need to set a country
+        if (option === 'import') {
+            setSelectedCountry(null);
+        } else {
+            // For other options, set a default country if needed
+            setSelectedCountry('Saudi Arabia'); // or whatever default country you want
+        }
     };
 
     return (
@@ -62,7 +68,7 @@ function Sidebar({ setSelectedOption }) {
                 )}
 
                 {/* Import/Export Flow */}
-                <li onClick={() => handleSelect('import_export')}>
+                <li onClick={() => handleSelect('import')}>
                     Import/Export Flow
                 </li>
             </ul>
