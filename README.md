@@ -4,7 +4,7 @@
 - Haoming Chen (ID: 013118495)
 - Tai Le (ID: 015617953)
 - Nguyen Bui (ID: 010732150)
-- Sarah Yu
+- Sarah Yu (ID: 016099252)
 
 ## Technology Stack
 
