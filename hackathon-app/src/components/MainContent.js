@@ -4,14 +4,17 @@ import GraphUI from "./GraphUI";
 import Chat from './Chat';
 
 function MainContent({option, country}) {
-    console.log("I want to see selectedOption: " + selectedOption)
 
     return (
         <main className="main-content">
             {option === 'chat' ? (
                 <Chat />
             ) : (
-                    <div>{option}, {country}</div>
+                <div className="main-contain">
+                    <GraphUI
+                        selectedOption={option}
+                        selectedCountry={country} />
+                </div>
             )}
         </main>
     );
