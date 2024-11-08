@@ -1,23 +1,21 @@
-# cmpe280_hackathon
+# CMPE280 Hackathon
 
-group member: 
+## Team Members
+- Haoming Chen (ID: 013118495)
+- Tai Le (ID: 015617953)
+- Nguyen Bui (ID: 010732150)
+- Sarah Yu
 
-Haoming Chen 013118495
-Tai Le 015617953
-Nguyen Bui 010732150
-Sarah Yu
+## Technology Stack
 
+### Frontend
+- **React**
 
-technology stacks:
+### Backend
+- **Python Flask**
 
-UI: 
-React
+### Language Model API
+- **Google Gemini**
 
-backend: 
-python flask
-
-LLM API: 
-Goolge Gemini
-
-vector database: 
-Pinecone
+### Vector Database
+- **Pinecone**
