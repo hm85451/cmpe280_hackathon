@@ -1,10 +1,10 @@
 import React from 'react';
 import './MainContent.css';
 import Chat from './Chat';
-function MainContent({selectedOption}) {
+function MainContent({option, country}) {
     return (
         <main className="main-content">
-            {selectedOption === 'chat' ? (
+            {option === 'chat' ? (
                 <Chat />
             ) : (
                     <div>{option}, {country}</div>

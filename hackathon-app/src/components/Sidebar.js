@@ -55,7 +55,7 @@ function Sidebar({ option, setOption }) {
                 <li onClick={() => handleOption('Import/Export Flow')}>
                     Import/Export Flow
                 </li>
-                <li onClick={() => handleSelect('chat')}>
+                <li onClick={() => handleOption('chat')}>
                     LLM Chat
                 </li>
             </ul>
