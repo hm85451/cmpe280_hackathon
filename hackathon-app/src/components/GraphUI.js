@@ -203,7 +203,7 @@ function GraphUI({ selectedOption, selectedCountry }) {
     }, [allYears]);
 
     return (
-        <div style={{ textAlign: 'center', margin: '20px' }}>
+        <div style={{ textAlign: 'center', margin: '20px', width: '1000px',}}>
             <h2>
                 Charts for {selectedCountry} - {selectedOption}
             </h2>
