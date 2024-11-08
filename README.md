@@ -7,17 +7,13 @@ Haoming Chen 013118495
 technology stacks:
 
 UI: 
-
 React
 
 backend: 
-
 python flask
 
 LLM API: 
-
 Goolge Gemini
 
-vector 
-
-database: pinecone
+vector database: 
+Pinecone
